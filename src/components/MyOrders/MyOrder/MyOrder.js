@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyOrder.css";
-// http://localhost:5000/orders
+// https://stark-citadel-44997.herokuapp.com/orders
 const MyOrder = (props) => {
   const { user, name, price, img, _id } = props.order;
   const handleDelete = props.deleteOrder;

@@ -4,7 +4,7 @@ const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
   const [status, setStatus] = useState("pending");
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://stark-citadel-44997.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -15,7 +15,7 @@ const ManageOrders = () => {
 
   //update
   const handleStatus = (id) => {
-    const uri = `http://localhost:5000/orders/${id}`;
+    const uri = `https://stark-citadel-44997.herokuapp.com/orders/${id}`;
     fetch(uri, {
       method: "PUT",
       headers: {
@@ -35,7 +35,7 @@ const ManageOrders = () => {
   //   delete
   const handleDelete = (_id) => {
     alert("The order is deleted");
-    const url = `http://localhost:5000/orders/${_id}`;
+    const url = `https://stark-citadel-44997.herokuapp.com/orders/${_id}`;
     fetch(url, {
       method: "delete",
     })

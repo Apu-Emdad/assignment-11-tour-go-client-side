@@ -7,7 +7,7 @@ const ServiceDetail = () => {
   const { serviceId } = useParams();
   const [service, setService] = useState({});
 
-  const url = `http://localhost:5000/services/${serviceId}`;
+  const url = `https://stark-citadel-44997.herokuapp.com/services/${serviceId}`;
 
   useEffect(() => {
     fetch(url)

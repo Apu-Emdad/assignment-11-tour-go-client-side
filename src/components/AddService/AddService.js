@@ -11,12 +11,14 @@ const AddService = () => {
     console.log(data);
     const addedService = { ...data, ...useStatus };
     console.log(addedService);
-    axios.post("http://localhost:5000/services/", addedService).then((res) => {
-      //   console.log(res);
-      if (res.data.insertedId) {
-        reset();
-      }
-    });
+    axios
+      .post("https://stark-citadel-44997.herokuapp.com/services/", addedService)
+      .then((res) => {
+        //   console.log(res);
+        if (res.data.insertedId) {
+          reset();
+        }
+      });
   };
 
   return (

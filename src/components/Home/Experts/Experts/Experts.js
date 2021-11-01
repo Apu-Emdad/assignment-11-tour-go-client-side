@@ -7,7 +7,7 @@ const Experts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/experts")
+    fetch("https://stark-citadel-44997.herokuapp.com/experts")
       .then((res) => res.json())
       .then((data) => {
         setExperts(data);

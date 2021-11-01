@@ -13,7 +13,7 @@ const Purchase = () => {
   const { user } = useAuth();
   const history = useHistory();
   //   console.log(purchaseId);
-  const url = `http://localhost:5000/services/${purchaseId}`;
+  const url = `https://stark-citadel-44997.herokuapp.com/services/${purchaseId}`;
 
   useEffect(() => {
     fetch(url)
@@ -33,13 +33,15 @@ const Purchase = () => {
     console.log(userOrder);
     // setOrderedItem(userOrder);
 
-    axios.post("http://localhost:5000/orders", userOrder).then((res) => {
-      //   console.log(res);
-      if (res.data.insertedId) {
-        reset();
-        history.push("/home");
-      }
-    });
+    axios
+      .post("https://stark-citadel-44997.herokuapp.com/orders", userOrder)
+      .then((res) => {
+        //   console.log(res);
+        if (res.data.insertedId) {
+          reset();
+          history.push("/home");
+        }
+      });
   };
 
   return (

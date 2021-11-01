@@ -6,7 +6,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useAuth();
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://stark-citadel-44997.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -19,7 +19,7 @@ const MyOrders = () => {
   //   console.log(myOrders);
   const handleDelete = (_id) => {
     alert("The order is cancelled");
-    const url = `http://localhost:5000/orders/${_id}`;
+    const url = `https://stark-citadel-44997.herokuapp.com/orders/${_id}`;
     fetch(url, {
       method: "delete",
     })
