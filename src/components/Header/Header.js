@@ -44,7 +44,7 @@ const Header = () => {
                 onClick={logOut}
                 variant="light"
               >
-                Logo Out
+                Log Out
               </button>
             ) : (
               <Nav.Link as={Link} to="/login">
