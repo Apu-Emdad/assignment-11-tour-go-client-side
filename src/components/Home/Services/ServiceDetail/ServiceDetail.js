@@ -20,10 +20,10 @@ const ServiceDetail = () => {
 
   //   console.log(serviceId);
   return (
-    <div class="card text-center">
+    <div class="card text-center container">
       <div class="card-header service-header">
         <h4>{service.name}</h4>
-        <img src={service.img} alt="" />
+        <img className="d-block w-100" src={service.img} alt="" />
       </div>
       <div class="card-body">
         <h5 class="card-title">{service.tour}</h5>
